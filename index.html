@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Motivos para Não Terminar Comigo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* corações animados caindo */
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      color: rgba(255, 0, 100, 0.6);
+      font-size: 20px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-10vh) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      border-bottom: 3px solid #b33939;
+    }
+
+    header h1 {
+      font-family: 'Sacramento', cursive;
+      font-size: 3rem;
+      color: #b33939;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .motivo {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .motivo:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .numero {
+      background: #b33939;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .texto {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 20px;
+      background: #b33939;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- corações caindo -->
+  <div class="hearts" id="hearts"></div>
+
+  <header>
+    <h1>💖 10 Motivos para Não Terminar Comigo 💖</h1>
+    <p>Porque o nosso amor merece continuar para sempre.</p>
+  </header>
+
+  <div class="container">
+    <div class="motivo">
+      <div class="numero">1</div>
+      <div class="texto">Eu sempre te faço sorrir, mesmo nos piores dias.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">2</div>
+      <div class="texto">Apoio seus sonhos e celebro cada conquista sua.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">3</div>
+      <div class="texto">Nossos momentos juntos são inesquecíveis.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">4</div>
+      <div class="texto">Eu te entendo como ninguém mais entende.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">5</div>
+      <div class="texto">Tenho paciência até nas suas fases difíceis.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">6</div>
+      <div class="texto">Faço de tudo para te ver feliz.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">7</div>
+      <div class="texto">Cuido de você como quem cuida de um tesouro.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">8</div>
+      <div class="texto">Sou sincero e verdadeiro com você.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">9</div>
+      <div class="texto">Tenho planos lindos para o nosso futuro.</div>
+    </div>
+    <div class="motivo">
+      <div class="numero">10</div>
+      <div class="texto">Porque eu te amo acima de tudo ❤️</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Feito com muito amor 💌</p>
+    <a href="#" class="botao">Promete que não vai terminar comigo?</a>
+  <button id="prometo" class="botao-sim">Prometo ❤️</button>
+  <button id="nao" class="botao-nao">Não 💔</button>
+</footer>
+
+<style>
+  footer {
+    position: relative;
+    height: 200px;
+  }
+
+  .botao-sim, .botao-nao {
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+  }
+
+  .botao-sim {
+    background: #b33939;
+    color: white;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .botao-nao {
+    background: #555;
+    color: white;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+<script>
+  const botaoNao = document.getElementById('nao');
+  const botaoSim = document.getElementById('prometo');
+
+  // Botão "Não" foge
+  botaoNao.addEventListener('mouseenter', () => {
+    const largura = window.innerWidth - 100; 
+    const altura = window.innerHeight - 50;  
+    const x = Math.random() * largura;
+    const y = Math.random() * altura;
+
+    botaoNao.style.left = x + 'px';
+    botaoNao.style.top = y + 'px';
+  });
+
+  // Botão "Prometo" responde fofo
+  botaoSim.addEventListener('click', () => {
+    alert("Sabia que você ia prometer! 💖 Agora somos inseparáveis 😍");
+  });
+</script>  </footer>
+
+  <script>
+    // gerar corações caindo
+    const heartsContainer = document.getElementById('hearts');
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
